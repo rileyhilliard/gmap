@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @campaign.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @campaign.address %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @campaign.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @campaign.latitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @campaign.gmaps %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @campaign.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>
