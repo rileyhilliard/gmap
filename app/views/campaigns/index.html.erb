@@ -3,11 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Address</th>
-    <th>Longitude</th>
-    <th>Latitude</th>
-    <th>Gmaps</th>
-    <th>Content</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,11 +11,6 @@
 <% @campaigns.each do |campaign| %>
   <tr>
     <td><%= campaign.name %></td>
-    <td><%= campaign.address %></td>
-    <td><%= campaign.longitude %></td>
-    <td><%= campaign.latitude %></td>
-    <td><%= campaign.gmaps %></td>
-    <td><%= truncate("#{campaign.content}", :length => 250, :separator => ' ') %></td>
     <td><%= link_to 'Show', campaign %></td>
     <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
     <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
