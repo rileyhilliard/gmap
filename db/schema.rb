@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121212205717) do
+ActiveRecord::Schema.define(:version => 20121214011237) do
 
   create_table "campaigns", :force => true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.float    "longitude"
-    t.float    "latitude"
+    t.text     "name"
+    t.text     "address"
+    t.decimal  "longitude"
+    t.decimal  "latitude"
     t.boolean  "gmaps"
-    t.string   "content"
+    t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

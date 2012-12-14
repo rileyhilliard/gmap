@@ -5,7 +5,6 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'gmaps4rails'
 # gem 'pg'
 
@@ -22,6 +21,10 @@ group :assets do
 end
 
 group :production do
+  gem 'pg'
+end
+
+group :development do
   gem 'pg'
 end
 
