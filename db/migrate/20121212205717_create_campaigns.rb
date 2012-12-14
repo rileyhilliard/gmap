@@ -1,4 +1,4 @@
-class DropCampaigns < ActiveRecord::Migration
+class CreateCampaigns < ActiveRecord::Migration
   def change
     drop_table :campaigns 
   end
