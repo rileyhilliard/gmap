@@ -21,4 +21,5 @@
 <br />
 
 <%= link_to 'New Campaign', new_campaign_path %>
-<%= gmaps4rails(@json) %>
+<%= gmaps("markers" => {"data" => @json},
+     "map_options" => {"detect_location" => true,"center_on_user" => true, "zoom" => 1 }) %>

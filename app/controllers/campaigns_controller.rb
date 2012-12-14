@@ -10,7 +10,9 @@ class CampaignsController < ApplicationController
        marker.picture({:picture => "http://rileyh.com/wp-content/uploads/2012/12/heart.png",
                        :width => 32,
                        :height => 32})
+      marker.sidebar "i'm the sidebar"
      end
+     
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @campaigns }
