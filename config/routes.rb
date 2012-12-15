@@ -1,4 +1,6 @@
 Gmap::Application.routes.draw do
+  resources :user_sessions
+
   resources :campaigns
   root :to => 'campaigns#index'
   

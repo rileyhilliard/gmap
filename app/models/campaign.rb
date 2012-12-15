@@ -1,6 +1,5 @@
 class Campaign < ActiveRecord::Base
   attr_accessible :address, :content, :gmaps, :latitude, :longitude, :name
-  
   acts_as_gmappable
 
   def gmaps4rails_address

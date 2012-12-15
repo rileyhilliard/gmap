@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user_session.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @user_session.address %>
+</p>
+
+<p>
+  <b>Ip address:</b>
+  <%= @user_session.ip_address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @user_session.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @user_session.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_session_path(@user_session) %> |
+<%= link_to 'Back', user_sessions_path %>

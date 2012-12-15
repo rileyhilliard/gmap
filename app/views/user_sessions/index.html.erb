@@ -1,0 +1,35 @@
+<h1>Listing user_sessions</h1>
+<br />
+<strong>Your Detected City is:</strong> <%=  @client_city %>  <br/>
+<strong>Your Detected Region is:</strong> <%=  @client_region %>  <br/>
+<strong>Your Detected Country is:</strong> <%=  @client_country %>  <br/>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Ip address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_sessions.each do |user_session| %>
+  <tr>
+    <td><%= user_session.name %></td>
+    <td><%= user_session.address %></td>
+    <td><%= user_session.ip_address %></td>
+    <td><%= user_session.latitude %></td>
+    <td><%= user_session.longitude %></td>
+    <td><%= link_to 'Show', user_session %></td>
+    <td><%= link_to 'Edit', edit_user_session_path(user_session) %></td>
+    <td><%= link_to 'Destroy', user_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+</table>
+<% end %>
+
+
+<%= link_to 'New User session', new_user_session_path %><br/>

@@ -1,4 +1,9 @@
 <h1>Listing campaigns</h1>
+<strong>Your Detected City is:</strong> <%=  @client_city %>  <br/>
+<strong>Your Detected Region is:</strong> <%=  @client_region %>  <br/>
+<strong>Your Detected Country is:</strong> <%=  @client_country %>  <br/>
+<strong>Your Detected lon is:</strong> <%=  @lon %>  <br/>
+<strong>Your Detected lat is:</strong> <%=  @lat %>  <br/>
 
 <table>
   <tr>
@@ -22,4 +27,8 @@
 
 <%= link_to 'New Campaign', new_campaign_path %>
 <%= gmaps("markers" => {"data" => @json},
-     "map_options" => {"detect_location" => true,"center_on_user" => true, "zoom" => 1 }) %>
+          "map_options" => {"auto_zoom" => false,
+							"bounds" => "[{'lat': #{@lat}, 'lng': #{@lon}}]", 
+							"center_on_user" => true,
+							"zoom" => 9
+							}) %>

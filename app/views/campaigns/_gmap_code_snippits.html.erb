@@ -22,3 +22,17 @@ Gmaps.map.callback = function() {
 };        
 </script>
 <% end %>
+
+
+
+"auto_adjust" => true, 
+"detect_location" => true, 
+"center_on_user" => true,}
+
+### WORKING
+<%= gmaps("markers" => {"data" => @json},
+          "map_options" => {"auto_zoom" => false,
+							"bounds" => "[{'lat': #{@lat}, 'lng': #{@lon}}]",
+	 					    "zoom" => 9, 
+							"center_on_user" => true
+							}) %>
